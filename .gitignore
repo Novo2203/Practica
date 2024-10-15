@@ -1,1 +1,5 @@
+# No carga los archivos .log
 *.log
+
+# Ignora el archivo de variables de entorno
+.env
