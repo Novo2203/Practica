@@ -1,0 +1,19 @@
+name: Gitleaks Scan
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  gitleaks-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Run Gitleaks
+        uses: zricethezav/gitleaks-action@v1.0.5
+        with:
+          args: "--no-git"
