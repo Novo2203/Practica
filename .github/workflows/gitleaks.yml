@@ -15,5 +15,3 @@ jobs:
 
       - name: Run Gitleaks
         run: gitleaks detect --source . --exit-code 1 || (echo "Se han detectado fugas" && exit 1)
-         with:
-          args: "--no-git"
